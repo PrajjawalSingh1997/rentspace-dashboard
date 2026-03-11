@@ -3,6 +3,7 @@
 
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
+import { STORAGE_KEYS } from "@/config/constants";
 
 /**
  * Admin user profile from login response
@@ -64,7 +65,7 @@ export const useAuthStore = create<AuthState>()(
                 set({ token }),
         }),
         {
-            name: "rentspace-admin-auth",
+            name: STORAGE_KEYS.AUTH_STORE,
             // Only persist token and admin — isAuthenticated is derived
             partialize: (state) => ({
                 token: state.token,

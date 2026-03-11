@@ -2,7 +2,7 @@
 // Axios instance with JWT interceptor and error handling
 
 import axios, { AxiosError, type InternalAxiosRequestConfig } from "axios";
-import { useAuthStore } from "@/stores/auth";
+import { useAuthStore } from "@/features/auth/stores/auth";
 
 /**
  * Base API client for all dashboard requests
