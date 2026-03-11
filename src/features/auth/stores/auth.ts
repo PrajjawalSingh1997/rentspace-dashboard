@@ -34,6 +34,9 @@ interface AuthState {
     logout: () => void;
     /** Update token (e.g., after refresh) */
     setToken: (token: string) => void;
+    /** Hydration status */
+    _hasHydrated: boolean;
+    setHasHydrated: (state: boolean) => void;
 }
 
 /**
@@ -63,6 +66,9 @@ export const useAuthStore = create<AuthState>()(
 
             setToken: (token: string) =>
                 set({ token }),
+
+            _hasHydrated: false,
+            setHasHydrated: (state) => set({ _hasHydrated: state }),
         }),
         {
             name: STORAGE_KEYS.AUTH_STORE,
@@ -72,6 +78,9 @@ export const useAuthStore = create<AuthState>()(
                 admin: state.admin,
                 isAuthenticated: state.isAuthenticated,
             }),
+            onRehydrateStorage: () => (state) => {
+                state?.setHasHydrated(true);
+            },
         }
     )
 );

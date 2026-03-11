@@ -11,7 +11,7 @@ import { useAuthStore } from "@/features/auth/stores/auth";
  * - Points to the backend server
  */
 const api = axios.create({
-    baseURL: process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000",
+    baseURL: process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000",
     timeout: 30000,
     headers: {
         "Content-Type": "application/json",
@@ -34,7 +34,11 @@ api.interceptors.request.use(
 api.interceptors.response.use(
     (response) => response,
     (error: AxiosError) => {
-        if (error.response?.status === 401) {
+        const token = useAuthStore.getState().token;
+
+        // If we get a 401, but the user is using the local DEV bypass, stay logged in
+        // (This allows frontend dev without needing a working local backend)
+        if (error.response?.status === 401 && token !== 'dev-bypass-token') {
             // Token expired or invalid — logout and redirect
             useAuthStore.getState().logout();
             if (typeof window !== "undefined") {
