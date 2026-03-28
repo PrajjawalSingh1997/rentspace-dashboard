@@ -1,20 +1,12 @@
 // src/types/api.ts
 // Shared TypeScript interfaces for API responses
 
-/**
- * Standard paginated response from backend
- * Matches admin/shared/pagination.util.ts format
- */
 export interface PaginatedResponse<T> {
-    data: T[];
-    pagination: {
-        page: number;
-        limit: number;
-        total: number;
-        totalPages: number;
-        hasNext: boolean;
-        hasPrev: boolean;
-    };
+    items: T[];
+    total: number;
+    page: number;
+    limit: number;
+    totalPages: number;
 }
 
 /**
@@ -87,21 +79,61 @@ export interface ListParams {
  */
 export interface AccountSummary {
     id: string;
-    accountName: string | null;
-    accountEmail: string | null;
-    accountPhone: string | null;
+    name: string | null;
+    email: string | null;
+    phone: string | null;
     status: AccountStatus;
-    totalProperties: number;
-    totalTenants: number;
-    totalRentAmount: number;
+    propertyCount: number;
+    tenantCount: number;
+    totalRentAmount?: number;
     churnRiskScore: number | null;
     createdAt: string;
-    closedAt: string | null;
+    closedAt?: string | null;
     plan: {
         id: string;
         name: string;
         code: string;
-    } | null;
+    } | string | null;
+}
+
+/**
+ * Response type for accounts list
+ */
+export type AccountListResponse = AccountSummary;
+
+export interface UserListQuery extends ListParams {
+    role?: string | 'ALL';
+    isActive?: boolean | string;
+}
+
+export interface UserListResponse {
+    id: string;
+    name: string | null;
+    email: string | null;
+    phone: string | null;
+    isActive: boolean;
+    createdAt: string;
+    membershipCount: number;
+    tenantCount: number;
+}
+
+export interface AlertListQuery extends ListParams {
+    status?: 'UNREAD' | 'READ' | 'RESOLVED' | 'ALL';
+    severity?: AlertSeverity | 'ALL';
+}
+
+export interface AlertResponse {
+    id: string;
+    title: string;
+    description: string;
+    message?: string;
+    source: string;
+    severity: AlertSeverity;
+    status: 'UNREAD' | 'READ' | 'RESOLVED';
+    createdAt: string;
+    timestamp: string;
+    targetUrl?: string;
+    metadata?: Record<string, any>;
 }
 
 /**
@@ -120,4 +152,15 @@ export interface OverviewKPIs {
     churnRate: number;
     activeAccounts: number;
     inactiveAccounts: number;
+}
+/**
+ * Query parameters for fetching accounts list
+ */
+export interface AccountListQuery extends ListParams {
+    status?: string | 'ALL';
+    planId?: string | 'ALL';
+    minUsers?: number;
+    maxUsers?: number;
+    minProperties?: number;
+    maxProperties?: number;
 }

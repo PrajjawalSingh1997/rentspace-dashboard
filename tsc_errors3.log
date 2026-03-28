@@ -1,0 +1,21 @@
+﻿src/features/accounts/components/accounts-table.tsx(47,56): error TS2339: Property 'name' does not exist on type 'AccountSummary'.
+src/features/accounts/components/accounts-table.tsx(60,42): error TS2339: Property 'name' does not exist on type 'AccountSummary'.
+src/features/accounts/components/accounts-table.tsx(64,97): error TS2339: Property 'name' does not exist on type 'AccountSummary'.
+src/features/accounts/components/accounts-table.tsx(78,87): error TS2339: Property 'email' does not exist on type 'AccountSummary'.
+src/features/accounts/components/accounts-table.tsx(79,79): error TS2339: Property 'phone' does not exist on type 'AccountSummary'.
+src/features/accounts/components/accounts-table.tsx(96,21): error TS2322: Type '{ id: string; name: string; code: string; } | null' is not assignable to type 'ReactNode'.
+  Type '{ id: string; name: string; code: string; }' is not assignable to type 'ReactNode'.
+src/features/accounts/components/modals/add-note-modal.tsx(46,60): error TS2339: Property 'name' does not exist on type 'AccountSummary'.
+src/features/accounts/components/modals/churn-score-modal.tsx(49,83): error TS2339: Property 'name' does not exist on type 'AccountSummary'.
+src/features/accounts/components/modals/status-override-modal.tsx(47,71): error TS2339: Property 'name' does not exist on type 'AccountSummary'.
+src/features/alerts/components/alerts-table.tsx(107,36): error TS2339: Property 'description' does not exist on type 'AlertResponse'.
+src/features/alerts/components/alerts-table.tsx(119,39): error TS2339: Property 'source' does not exist on type 'AlertResponse'.
+src/features/alerts/components/alerts-table.tsx(130,68): error TS2339: Property 'timestamp' does not exist on type 'AlertResponse'.
+src/features/alerts/components/alerts-table.tsx(140,54): error TS2339: Property 'source' does not exist on type 'AlertResponse'.
+src/features/plans/components/tenant-plan-management.tsx(63,78): error TS2339: Property 'name' does not exist on type 'AccountSummary'.
+src/features/plans/components/tenant-plan-management.tsx(63,90): error TS2339: Property 'email' does not exist on type 'AccountSummary'.
+src/features/users/components/users-client.tsx(50,22): error TS2345: Argument of type '(prev: UserListQuery) => { isActive: boolean; page: number; role?: string | "ALL"; limit?: number; search?: string; sortBy?: string; sortOrder?: "asc" | "desc"; }' is not assignable to parameter of type 'SetStateAction<UserListQuery>'.
+  Type '(prev: UserListQuery) => { isActive: boolean; page: number; role?: string | "ALL"; limit?: number; search?: string; sortBy?: string; sortOrder?: "asc" | "desc"; }' is not assignable to type '(prevState: UserListQuery) => UserListQuery'.
+    Call signature return types '{ isActive: boolean; page: number; role?: string | undefined; limit?: number | undefined; search?: string | undefined; sortBy?: string | undefined; sortOrder?: "asc" | "desc" | undefined; }' and 'UserListQuery' are incompatible.
+      The types of 'isActive' are incompatible between these types.
+        Type 'boolean' is not assignable to type 'string'.

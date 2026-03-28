@@ -57,7 +57,7 @@ export function AccountsTable({
                     <div className="flex items-center gap-3">
                         <Avatar className="h-9 w-9 bg-[#3b82f6] text-white font-medium text-sm">
                             <AvatarFallback className="bg-[#3b82f6] text-white">
-                                {account.name.split(' ').map((n: string) => n[0]).join('').substring(0, 2).toUpperCase()}
+                                {(account.name || 'Unknown').split(' ').map((n: string) => n[0]).join('').substring(0, 2).toUpperCase()}
                             </AvatarFallback>
                         </Avatar>
                         <div className="flex flex-col">
@@ -93,7 +93,7 @@ export function AccountsTable({
             header: 'Plan',
             cell: ({ row }) => (
                 <Badge variant="secondary" className="bg-emerald-50 text-emerald-700 hover:bg-emerald-100 font-medium">
-                    {row.original.plan}
+                    {typeof row.original.plan === 'object' ? row.original.plan?.name || 'Free' : (row.original.plan || 'Free')}
                 </Badge>
             )
         },

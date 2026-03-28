@@ -1,0 +1,3 @@
+﻿src/features/accounts/components/accounts-table.tsx(60,34): error TS18047: 'account.name' is possibly 'null'.
+src/features/accounts/components/accounts-table.tsx(96,21): error TS2322: Type 'string | { id: string; name: string; code: string; } | null' is not assignable to type 'ReactNode'.
+  Type '{ id: string; name: string; code: string; }' is not assignable to type 'ReactNode'.

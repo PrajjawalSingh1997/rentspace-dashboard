@@ -1,0 +1,88 @@
+﻿src/features/accounts/api/use-accounts.ts(30,20): error TS2352: Conversion of type '{ items: AccountListResponse[]; total: any; page: any; limit: any; totalPages: any; }' to type 'PaginatedResponse<AccountListResponse>' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Type '{ items: AccountListResponse[]; total: any; page: any; limit: any; totalPages: any; }' is missing the following properties from type 'PaginatedResponse<AccountListResponse>': data, pagination
+src/features/accounts/components/account-actions.tsx(31,42): error TS2339: Property 'id' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/accounts-client.tsx(33,33): error TS2339: Property 'items' does not exist on type 'PaginatedResponse<AccountListResponse>'.
+src/features/accounts/components/accounts-client.tsx(33,43): error TS7006: Parameter 'acc' implicitly has an 'any' type.
+src/features/accounts/components/accounts-client.tsx(106,36): error TS2339: Property 'items' does not exist on type 'PaginatedResponse<AccountListResponse>'.
+src/features/accounts/components/accounts-client.tsx(106,50): error TS7006: Parameter 'acc' implicitly has an 'any' type.
+src/features/accounts/components/accounts-client.tsx(161,25): error TS2339: Property 'items' does not exist on type 'PaginatedResponse<AccountListResponse>'.
+src/features/accounts/components/accounts-client.tsx(169,37): error TS2339: Property 'items' does not exist on type 'PaginatedResponse<AccountListResponse>'.
+src/features/accounts/components/accounts-client.tsx(179,27): error TS2339: Property 'totalPages' does not exist on type 'PaginatedResponse<AccountListResponse>'.
+src/features/accounts/components/accounts-client.tsx(182,84): error TS2339: Property 'page' does not exist on type 'PaginatedResponse<AccountListResponse>'.
+src/features/accounts/components/accounts-client.tsx(182,101): error TS2339: Property 'limit' does not exist on type 'PaginatedResponse<AccountListResponse>'.
+src/features/accounts/components/accounts-client.tsx(182,181): error TS2339: Property 'page' does not exist on type 'PaginatedResponse<AccountListResponse>'.
+src/features/accounts/components/accounts-client.tsx(182,193): error TS2339: Property 'limit' does not exist on type 'PaginatedResponse<AccountListResponse>'.
+src/features/accounts/components/accounts-client.tsx(182,205): error TS2339: Property 'total' does not exist on type 'PaginatedResponse<AccountListResponse>'.
+src/features/accounts/components/accounts-client.tsx(182,273): error TS2339: Property 'total' does not exist on type 'PaginatedResponse<AccountListResponse>'.
+src/features/accounts/components/accounts-client.tsx(189,44): error TS2339: Property 'page' does not exist on type 'PaginatedResponse<AccountListResponse>'.
+src/features/accounts/components/accounts-client.tsx(196,113): error TS2339: Property 'totalPages' does not exist on type 'PaginatedResponse<AccountListResponse>'.
+src/features/accounts/components/accounts-client.tsx(197,44): error TS2339: Property 'page' does not exist on type 'PaginatedResponse<AccountListResponse>'.
+src/features/accounts/components/accounts-client.tsx(197,57): error TS2339: Property 'totalPages' does not exist on type 'PaginatedResponse<AccountListResponse>'.
+src/features/accounts/components/accounts-client.tsx(211,36): error TS2339: Property 'items' does not exist on type 'PaginatedResponse<AccountListResponse>'.
+src/features/accounts/components/accounts-client.tsx(212,44): error TS2339: Property 'items' does not exist on type 'PaginatedResponse<AccountListResponse>'.
+src/features/accounts/components/accounts-client.tsx(212,58): error TS7006: Parameter 'sum' implicitly has an 'any' type.
+src/features/accounts/components/accounts-client.tsx(212,63): error TS7006: Parameter 'acc' implicitly has an 'any' type.
+src/features/accounts/components/accounts-client.tsx(212,122): error TS2339: Property 'items' does not exist on type 'PaginatedResponse<AccountListResponse>'.
+src/features/accounts/components/accounts-client.tsx(217,42): error TS2339: Property 'total' does not exist on type 'PaginatedResponse<AccountListResponse>'.
+src/features/accounts/components/accounts-client.tsx(217,75): error TS2339: Property 'total' does not exist on type 'PaginatedResponse<AccountListResponse>'.
+src/features/accounts/components/accounts-client.tsx(229,36): error TS2339: Property 'items' does not exist on type 'PaginatedResponse<AccountListResponse>'.
+src/features/accounts/components/accounts-client.tsx(229,50): error TS7006: Parameter 'acc' implicitly has an 'any' type.
+src/features/accounts/components/accounts-client.tsx(241,80): error TS2339: Property 'total' does not exist on type 'PaginatedResponse<AccountListResponse>'.
+src/features/accounts/components/accounts-table.tsx(45,64): error TS2339: Property 'id' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/accounts-table.tsx(46,103): error TS2339: Property 'id' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/accounts-table.tsx(47,56): error TS2339: Property 'name' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/accounts-table.tsx(60,42): error TS2339: Property 'name' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/accounts-table.tsx(64,97): error TS2339: Property 'name' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/accounts-table.tsx(65,87): error TS2339: Property 'id' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/accounts-table.tsx(78,87): error TS2339: Property 'email' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/accounts-table.tsx(79,79): error TS2339: Property 'phone' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/accounts-table.tsx(88,87): error TS2339: Property 'createdAt' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/accounts-table.tsx(96,35): error TS2339: Property 'plan' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/accounts-table.tsx(103,73): error TS2339: Property 'status' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/accounts-table.tsx(110,44): error TS2339: Property 'churnRiskScore' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/accounts-table.tsx(111,49): error TS2339: Property 'churnRiskScore' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/accounts-table.tsx(124,68): error TS2339: Property 'churnRiskScore' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/modals/add-note-modal.tsx(30,27): error TS2339: Property 'id' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/modals/add-note-modal.tsx(46,60): error TS2339: Property 'name' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/modals/churn-score-modal.tsx(24,48): error TS2339: Property 'churnRiskScore' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/modals/churn-score-modal.tsx(33,27): error TS2339: Property 'id' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/modals/churn-score-modal.tsx(49,83): error TS2339: Property 'name' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/modals/status-override-modal.tsx(24,62): error TS2339: Property 'status' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/modals/status-override-modal.tsx(24,81): error TS2339: Property 'status' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/modals/status-override-modal.tsx(28,32): error TS2339: Property 'status' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/modals/status-override-modal.tsx(34,27): error TS2339: Property 'id' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/modals/status-override-modal.tsx(47,71): error TS2339: Property 'name' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/modals/status-override-modal.tsx(54,93): error TS2339: Property 'status' does not exist on type 'AccountListResponse'.
+src/features/alerts/api/use-alerts.ts(4,15): error TS2305: Module '"@/types/api"' has no exported member 'AlertListQuery'.
+src/features/alerts/api/use-alerts.ts(4,31): error TS2305: Module '"@/types/api"' has no exported member 'AlertResponse'.
+src/features/alerts/components/alerts-client.tsx(5,15): error TS2305: Module '"@/types/api"' has no exported member 'AlertListQuery'.
+src/features/alerts/components/alerts-client.tsx(35,33): error TS2339: Property 'items' does not exist on type 'PaginatedResponse<AlertResponse>'.
+src/features/alerts/components/alerts-client.tsx(35,43): error TS7006: Parameter 'alert' implicitly has an 'any' type.
+src/features/alerts/components/alerts-client.tsx(68,31): error TS2339: Property 'total' does not exist on type 'PaginatedResponse<AlertResponse>'.
+src/features/alerts/components/alerts-client.tsx(69,33): error TS2339: Property 'items' does not exist on type 'PaginatedResponse<AlertResponse>'.
+src/features/alerts/components/alerts-client.tsx(69,47): error TS7006: Parameter 'i' implicitly has an 'any' type.
+src/features/alerts/components/alerts-client.tsx(195,29): error TS2339: Property 'items' does not exist on type 'PaginatedResponse<AlertResponse>'.
+src/features/alerts/components/alerts-client.tsx(203,41): error TS2339: Property 'items' does not exist on type 'PaginatedResponse<AlertResponse>'.
+src/features/alerts/components/alerts-client.tsx(212,51): error TS2339: Property 'items' does not exist on type 'PaginatedResponse<AlertResponse>'.
+src/features/alerts/components/alerts-client.tsx(212,80): error TS2339: Property 'total' does not exist on type 'PaginatedResponse<AlertResponse>'.
+src/features/alerts/components/alerts-client.tsx(216,120): error TS2339: Property 'totalPages' does not exist on type 'PaginatedResponse<AlertResponse>'.
+src/features/alerts/components/alerts-table.tsx(9,15): error TS2305: Module '"@/types/api"' has no exported member 'AlertResponse'.
+src/features/alerts/services/alerts.service.ts(3,15): error TS2305: Module '"@/types/api"' has no exported member 'AlertListQuery'.
+src/features/alerts/services/alerts.service.ts(3,31): error TS2305: Module '"@/types/api"' has no exported member 'AlertResponse'.
+src/features/alerts/services/alerts.service.ts(10,16): error TS2352: Conversion of type '{ items: AlertResponse[]; data?: AlertResponse[]; }' to type 'PaginatedResponse<AlertResponse>' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Property 'pagination' is missing in type '{ items: AlertResponse[]; data?: AlertResponse[]; }' but required in type 'PaginatedResponse<AlertResponse>'.
+src/features/plans/components/tenant-plan-management.tsx(62,44): error TS2339: Property 'items' does not exist on type 'PaginatedResponse<AccountListResponse>'.
+src/features/plans/components/tenant-plan-management.tsx(62,54): error TS7006: Parameter 'acc' implicitly has an 'any' type.
+src/features/users/api/use-users.ts(3,15): error TS2305: Module '"@/types/api"' has no exported member 'UserListQuery'.
+src/features/users/api/use-users.ts(3,30): error TS2305: Module '"@/types/api"' has no exported member 'UserListResponse'.
+src/features/users/api/use-users.ts(27,20): error TS2352: Conversion of type '{ items: UserListResponse[]; total: number; page: number; limit: number; totalPages: number; }' to type 'PaginatedResponse<UserListResponse>' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Type '{ items: UserListResponse[]; total: number; page: number; limit: number; totalPages: number; }' is missing the following properties from type 'PaginatedResponse<UserListResponse>': data, pagination
+src/features/users/components/users-client.tsx(55,28): error TS2339: Property 'items' does not exist on type 'PaginatedResponse<UserListResponse>'.
+src/features/users/components/users-client.tsx(55,39): error TS7006: Parameter 'u' implicitly has an 'any' type.
+src/features/users/components/users-client.tsx(70,30): error TS2339: Property 'total' does not exist on type 'PaginatedResponse<UserListResponse>'.
+src/features/users/components/users-client.tsx(71,30): error TS2339: Property 'totalPages' does not exist on type 'PaginatedResponse<UserListResponse>'.
+src/features/users/components/users-client.tsx(170,29): error TS2339: Property 'items' does not exist on type 'PaginatedResponse<UserListResponse>'.
+src/features/users/components/users-client.tsx(178,42): error TS2339: Property 'items' does not exist on type 'PaginatedResponse<UserListResponse>'.
+src/features/users/components/users-table.tsx(4,15): error TS2305: Module '"@/types/api"' has no exported member 'UserListResponse'.
+src/features/users/components/users-table.tsx(34,48): error TS7006: Parameter 'n' implicitly has an 'any' type.
+src/features/users/services/users.service.ts(3,15): error TS2305: Module '"@/types/api"' has no exported member 'UserListQuery'.

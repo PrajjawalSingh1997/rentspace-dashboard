@@ -1,0 +1,45 @@
+﻿src/features/accounts/components/account-actions.tsx(31,42): error TS2339: Property 'id' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/accounts-client.tsx(33,54): error TS2339: Property 'id' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/accounts-client.tsx(106,62): error TS2339: Property 'churnRiskScore' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/accounts-client.tsx(212,89): error TS2339: Property 'churnRiskScore' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/accounts-client.tsx(229,62): error TS2339: Property 'churnRiskScore' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/accounts-table.tsx(45,64): error TS2339: Property 'id' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/accounts-table.tsx(46,103): error TS2339: Property 'id' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/accounts-table.tsx(47,56): error TS2339: Property 'name' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/accounts-table.tsx(60,42): error TS2339: Property 'name' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/accounts-table.tsx(64,97): error TS2339: Property 'name' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/accounts-table.tsx(65,87): error TS2339: Property 'id' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/accounts-table.tsx(78,87): error TS2339: Property 'email' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/accounts-table.tsx(79,79): error TS2339: Property 'phone' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/accounts-table.tsx(88,87): error TS2339: Property 'createdAt' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/accounts-table.tsx(96,35): error TS2339: Property 'plan' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/accounts-table.tsx(103,73): error TS2339: Property 'status' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/accounts-table.tsx(110,44): error TS2339: Property 'churnRiskScore' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/accounts-table.tsx(111,49): error TS2339: Property 'churnRiskScore' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/accounts-table.tsx(124,68): error TS2339: Property 'churnRiskScore' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/modals/add-note-modal.tsx(30,27): error TS2339: Property 'id' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/modals/add-note-modal.tsx(46,60): error TS2339: Property 'name' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/modals/churn-score-modal.tsx(24,48): error TS2339: Property 'churnRiskScore' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/modals/churn-score-modal.tsx(33,27): error TS2339: Property 'id' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/modals/churn-score-modal.tsx(49,83): error TS2339: Property 'name' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/modals/status-override-modal.tsx(24,62): error TS2339: Property 'status' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/modals/status-override-modal.tsx(24,81): error TS2339: Property 'status' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/modals/status-override-modal.tsx(28,32): error TS2339: Property 'status' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/modals/status-override-modal.tsx(34,27): error TS2339: Property 'id' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/modals/status-override-modal.tsx(47,71): error TS2339: Property 'name' does not exist on type 'AccountListResponse'.
+src/features/accounts/components/modals/status-override-modal.tsx(54,93): error TS2339: Property 'status' does not exist on type 'AccountListResponse'.
+src/features/alerts/api/use-alerts.ts(4,15): error TS2305: Module '"@/types/api"' has no exported member 'AlertListQuery'.
+src/features/alerts/api/use-alerts.ts(4,31): error TS2305: Module '"@/types/api"' has no exported member 'AlertResponse'.
+src/features/alerts/components/alerts-client.tsx(5,15): error TS2305: Module '"@/types/api"' has no exported member 'AlertListQuery'.
+src/features/alerts/components/alerts-table.tsx(9,15): error TS2305: Module '"@/types/api"' has no exported member 'AlertResponse'.
+src/features/alerts/services/alerts.service.ts(3,15): error TS2305: Module '"@/types/api"' has no exported member 'AlertListQuery'.
+src/features/alerts/services/alerts.service.ts(3,31): error TS2305: Module '"@/types/api"' has no exported member 'AlertResponse'.
+src/features/plans/components/tenant-plan-management.tsx(63,54): error TS2339: Property 'id' does not exist on type 'AccountListResponse'.
+src/features/plans/components/tenant-plan-management.tsx(63,69): error TS2339: Property 'id' does not exist on type 'AccountListResponse'.
+src/features/plans/components/tenant-plan-management.tsx(63,78): error TS2339: Property 'name' does not exist on type 'AccountListResponse'.
+src/features/plans/components/tenant-plan-management.tsx(63,90): error TS2339: Property 'email' does not exist on type 'AccountListResponse'.
+src/features/users/api/use-users.ts(3,15): error TS2305: Module '"@/types/api"' has no exported member 'UserListQuery'.
+src/features/users/api/use-users.ts(3,30): error TS2305: Module '"@/types/api"' has no exported member 'UserListResponse'.
+src/features/users/components/users-table.tsx(4,15): error TS2305: Module '"@/types/api"' has no exported member 'UserListResponse'.
+src/features/users/components/users-table.tsx(34,48): error TS7006: Parameter 'n' implicitly has an 'any' type.
+src/features/users/services/users.service.ts(3,15): error TS2305: Module '"@/types/api"' has no exported member 'UserListQuery'.
