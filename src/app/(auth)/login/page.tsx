@@ -1,5 +1,6 @@
 import { LoginForm } from "@/features/auth/components/login-form";
-import { Building2 } from "lucide-react";
+import { BrandName } from "@/components/ui/brand-name";
+
 
 export default function LoginPage() {
     return (
@@ -11,10 +12,14 @@ export default function LoginPage() {
                 <div className="absolute bottom-[-10%] right-[-10%] w-[400px] h-[400px] bg-[#CEF17B]/20 rounded-full blur-3xl opacity-50" />
 
                 <div className="relative z-10 flex items-center gap-3">
-                    <div className="w-12 h-12 xl:w-16 xl:h-16 rounded bg-[#CEF17B] flex items-center justify-center text-[#084734]">
-                        <Building2 className="w-8 h-8 xl:w-10 xl:h-10" />
+                    {/* Rotated diamond logo */}
+                    <div className="relative w-12 h-12 xl:w-16 xl:h-16 flex items-center justify-center">
+                        <div className="w-[46px] h-[46px] border-[2.89px] border-white rounded-[9.25px] rotate-45" />
+                        <span className="absolute font-scrib font-normal text-[23px] leading-[33px] text-center tracking-[-1.16px] capitalize text-white">
+                            R
+                        </span>
                     </div>
-                    <span className="text-2xl xl:text-3xl font-bold tracking-tight">RentLyf</span>
+                    <BrandName className="text-2xl xl:text-3xl tracking-tight" />
                 </div>
 
                 <div className="relative z-10 space-y-6 lg:space-y-8 max-w-lg 2xl:max-w-2xl">
@@ -22,12 +27,12 @@ export default function LoginPage() {
                         Manage your properties with unprecedented clarity.
                     </h1>
                     <p className="text-[#cce3dd] text-lg xl:text-xl leading-relaxed">
-                        RentLyf Super Admin gives you real-time visibility into tenants, rent collections, maintenance requests, and platform growth metrics.
+                        <BrandName text="Rentlyf" /> Super Admin gives you real-time visibility into tenants, rent collections, maintenance requests, and platform growth metrics.
                     </p>
                 </div>
 
                 <div className="relative z-10 text-sm xl:text-base text-[#cce3dd]">
-                    &copy; {new Date().getFullYear()} RentLyf Technologies. All rights reserved.
+                    &copy; {new Date().getFullYear()} <BrandName text="Rentlyf" /> Technologies. All rights reserved.
                 </div>
             </div>
 

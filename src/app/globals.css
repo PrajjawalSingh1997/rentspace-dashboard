@@ -173,6 +173,14 @@
   --sidebar-hover: var(--gray-900);
 }
 
+@font-face {
+  font-family: 'SCRIB SANS';
+  src: url('/fonts/ScribSans.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -238,6 +246,7 @@
 
   --font-sans: var(--font-sans);
   --font-mono: var(--font-geist-mono);
+  --font-scrib: 'SCRIB SANS', sans-serif;
 
   /* Radii mapping to 4px scales from Stitch */
   --radius-xs: 2px;
@@ -276,6 +285,12 @@ body {
 *:focus-visible {
   outline: 2px solid var(--ring);
   outline-offset: 2px;
+}
+
+@layer utilities {
+  .font-scrib {
+    font-family: 'SCRIB SANS', sans-serif !important;
+  }
 }
 
 @layer base {

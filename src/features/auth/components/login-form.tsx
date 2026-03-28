@@ -4,13 +4,13 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { loginSchema, type LoginFormValues } from "../types/auth.schema";
-import { Building, Eye, EyeOff, Loader2, Mail, Lock } from "lucide-react";
+import { Eye, EyeOff, Loader2, Mail, Lock } from "lucide-react";
 import { useAuthStore } from "../stores/auth";
 import { useRouter } from "next/navigation";
 import { ROUTES } from "@/config/constants";
 import api, { getApiErrorMessage } from "@/lib/api";
 import { toast } from "sonner";
-import Link from "next/link";
+import { BrandName } from "@/components/ui/brand-name";
 
 export function LoginForm() {
     const [showPassword, setShowPassword] = useState(false);
@@ -42,7 +42,7 @@ export function LoginForm() {
             const result = response.data;
             if (result.success && result.data.accessToken) {
                 setAuth(result.data.accessToken, result.data.user);
-                toast.success("Welcome back to RentLyf Admin");
+                toast.success("Welcome back to Rentlyf Admin");
                 router.push(ROUTES.DASHBOARD.OVERVIEW);
             }
         } catch (error) {
@@ -54,11 +54,16 @@ export function LoginForm() {
 
     return (
         <div className="w-full max-w-[90%] sm:max-w-[80%] md:max-w-md lg:max-w-[70%] xl:max-w-lg 2xl:max-w-xl bg-white rounded-2xl shadow-sm border border-gray-200 p-6 md:p-8">
-            <div className="mb-6 text-center">
-                <div className="inline-flex w-12 h-12 lg:w-16 lg:h-16 rounded-xl bg-[#084734] items-center justify-center text-white mb-4">
-                    <Building className="w-6 h-6 lg:w-8 lg:h-8" />
+            <div className="mb-6 text-center flex flex-col items-center">
+                <div className="relative w-[64px] h-[64px] lg:w-[72px] lg:h-[72px] flex items-center justify-center mb-6 mt-2">
+                    <div className="absolute w-[80%] h-[80%] border-[3px] border-[#084734] rounded-[10px] rotate-45" />
+                    <span className="absolute font-scrib font-normal text-[28px] lg:text-[34px] text-center capitalize text-[#084734] z-10">
+                        R
+                    </span>
                 </div>
-                <h1 className="text-2xl lg:text-3xl font-bold text-gray-900 leading-tight mb-2">Sign In to RentLyf</h1>
+                <h1 className="text-2xl lg:text-3xl font-bold text-[#084734] leading-tight mb-2">
+                    Sign In to <BrandName />
+                </h1>
                 <p className="text-gray-500 text-sm lg:text-base">Enter your email and password to access the admin panel.</p>
             </div>
 
@@ -109,7 +114,7 @@ export function LoginForm() {
                         <input
                             type="checkbox"
                             {...register("rememberMe")}
-                            className="w-4 h-4 rounded border-gray-300 text-[#084734] focus:ring-[#084734]"
+                            className="w-4 h-4 rounded border-gray-300 accent-[#084734] focus:ring-[#084734]"
                         />
                         <span className="text-sm lg:text-base text-gray-600">Remember me</span>
                     </label>
@@ -131,34 +136,6 @@ export function LoginForm() {
                 </button>
             </form>
 
-            <div className="mt-6 text-center">
-                <p className="text-sm lg:text-base text-gray-500 mb-4">
-                    Super Admin without a password?{" "}
-                    <Link href="/login/otp" className="font-medium text-[#084734] hover:underline">
-                        Login with OTP
-                    </Link>
-                </p>
-
-                {/* DEV ONLY BYPASS BUTTON */}
-                <button
-                    type="button"
-                    onClick={() => {
-                        setAuth("dev-bypass-token", {
-                            id: "dev-admin-1",
-                            name: "Developer Admin",
-                            email: "dev@rentlyf.com",
-                            role: "SUPER_ADMIN",
-                            isActive: true,
-                            lastLoginAt: new Date().toISOString()
-                        });
-                        toast.success("Dev Bypass Active");
-                        router.push(ROUTES.DASHBOARD.OVERVIEW);
-                    }}
-                    className="w-full py-2 px-4 bg-orange-100/50 hover:bg-orange-100 text-orange-700 font-medium text-sm rounded-lg transition-colors border border-orange-200 mt-4"
-                >
-                    [DEV] Bypass Login
-                </button>
-            </div>
         </div>
     );
 }
